@@ -6,11 +6,12 @@ export default function Sidebar({ t, lang }: { t: TranslationDict, lang: "en" | 
   const accentColor = lang === "en" ? "text-blue-300" : "text-teal-300";
   const sectionTitleColor = lang === "en" ? "text-blue-200" : "text-teal-300";
   const ringBg = lang === "en" ? "bg-[#1a3d5c]" : "bg-[#064e3b]"; // bg-green-900
+  const profileHalo = lang === "en" ? "hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]" : "hover:shadow-[0_0_20px_rgba(16,185,129,0.5)]";
 
   return (
     <div className="md:sticky md:top-0 md:h-screen md:overflow-y-auto custom-scrollbar-wrapper bg-white/10 backdrop-blur-lg border-r border-white/20 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] text-white p-8 md:p-10 flex flex-col items-center md:items-start w-full transition-colors duration-700">
       {/* Profile Image */}
-      <div className={`w-48 h-48 sm:w-56 sm:h-56 flex-shrink-0 mx-auto mb-10 rounded-full p-2.5 sm:p-3 shadow-[0_0_20px_rgba(255,255,255,0.15)] transition-colors duration-700 ${ringBg}`}>
+      <div className={`w-48 h-48 sm:w-56 sm:h-56 flex-shrink-0 mx-auto mb-10 rounded-full p-2.5 sm:p-3 shadow-[0_0_20px_rgba(255,255,255,0.15)] transition-all duration-300 ease-in-out hover:scale-110 active:scale-95 cursor-pointer ${ringBg} ${profileHalo}`}>
         <div className="w-full h-full rounded-full border-4 border-white overflow-hidden">
           <img
             src="/images/profile.jpg"

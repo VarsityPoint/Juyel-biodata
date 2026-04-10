@@ -45,9 +45,9 @@ export default function MainContent({ t, lang }: { t: TranslationDict, lang: "en
       </header>
 
       {/* Professional Career */}
-      <section className="bg-white/10 backdrop-blur-md border border-white/20 shadow-xl rounded-2xl p-6 md:p-8 transition-all hover:bg-white/20">
+      <section className="group bg-white/10 backdrop-blur-md border border-white/20 shadow-xl rounded-2xl p-6 md:p-8 transition-all duration-300 hover:bg-white/20 hover:-translate-y-1 hover:shadow-2xl active:scale-[0.98]">
         <h3 className={`text-2xl font-bold mb-6 flex items-center gap-3 transition-colors duration-700 ${sectionTitleColor} ${lang === "bn" ? "font-bangla" : ""}`}>
-          <span className={`w-8 h-1 rounded-full inline-block transition-colors duration-700 ${headerLineColor}`}></span>
+          <span className="w-8 group-hover:w-12 h-1 rounded-full inline-block bg-white transition-all duration-300"></span>
           {t.professionalCareer}
         </h3>
         <div className="pl-4 border-l-2 border-white/30">
@@ -61,9 +61,9 @@ export default function MainContent({ t, lang }: { t: TranslationDict, lang: "en
       </section>
 
       {/* Educational Background */}
-      <section className="bg-white/10 backdrop-blur-md border border-white/20 shadow-xl rounded-2xl p-6 md:p-8 transition-all hover:bg-white/20">
+      <section className="group bg-white/10 backdrop-blur-md border border-white/20 shadow-xl rounded-2xl p-6 md:p-8 transition-all duration-300 hover:bg-white/20 hover:-translate-y-1 hover:shadow-2xl active:scale-[0.98]">
         <h3 className={`text-2xl font-bold mb-8 flex items-center gap-3 transition-colors duration-700 ${sectionTitleColor} ${lang === "bn" ? "font-bangla" : ""}`}>
-          <span className={`w-8 h-1 rounded-full inline-block transition-colors duration-700 ${headerLineColor}`}></span>
+          <span className="w-8 group-hover:w-12 h-1 rounded-full inline-block bg-white transition-all duration-300"></span>
           {t.educationalBackground}
         </h3>
         
@@ -118,9 +118,9 @@ export default function MainContent({ t, lang }: { t: TranslationDict, lang: "en
       </section>
 
       {/* Family Details */}
-      <section className="bg-white/10 backdrop-blur-md border border-white/20 shadow-xl rounded-2xl p-6 md:p-8 transition-all hover:bg-white/20">
+      <section className="group bg-white/10 backdrop-blur-md border border-white/20 shadow-xl rounded-2xl p-6 md:p-8 transition-all duration-300 hover:bg-white/20 hover:-translate-y-1 hover:shadow-2xl active:scale-[0.98]">
         <h3 className={`text-2xl font-bold mb-6 flex items-center gap-3 transition-colors duration-700 ${sectionTitleColor} ${lang === "bn" ? "font-bangla" : ""}`}>
-          <span className={`w-8 h-1 rounded-full inline-block transition-colors duration-700 ${headerLineColor}`}></span>
+          <span className="w-8 group-hover:w-12 h-1 rounded-full inline-block bg-white transition-all duration-300"></span>
           {t.familyDetails}
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -143,9 +143,9 @@ export default function MainContent({ t, lang }: { t: TranslationDict, lang: "en
       </section>
 
       {/* Gallery Section */}
-      <section className="bg-white/10 backdrop-blur-md border border-white/20 shadow-xl rounded-2xl p-6 md:p-8 transition-all hover:bg-white/20">
+      <section className="group bg-white/10 backdrop-blur-md border border-white/20 shadow-xl rounded-2xl p-6 md:p-8 transition-all duration-300 hover:bg-white/20 hover:-translate-y-1 hover:shadow-2xl active:scale-[0.98]">
         <h3 className={`text-2xl font-bold mb-6 flex items-center gap-3 transition-colors duration-700 ${sectionTitleColor} ${lang === "bn" ? "font-bangla" : ""}`}>
-          <span className={`w-8 h-1 rounded-full inline-block transition-colors duration-700 ${headerLineColor}`}></span>
+          <span className="w-8 group-hover:w-12 h-1 rounded-full inline-block bg-white transition-all duration-300"></span>
           {t.gallery}
         </h3>
         <Swiper
