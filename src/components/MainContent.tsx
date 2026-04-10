@@ -185,12 +185,12 @@ export default function MainContent({ t, lang }: { t: TranslationDict, lang: "en
           {isEn ? (
             <>
               Developed with ❤️ by <span className="font-bold text-blue-300">K M Habibullah</span> |{" "}
-              <a href="tel:01700905060" className="hover:text-white transition-colors">+880 1700905060</a>
+              <a href="tel:01700905062" className="hover:text-white transition-colors">+880 1700905062</a>
             </>
           ) : (
             <>
               ডিজাইন এবং ডেভেলপমেন্টে: <span className="font-bold text-emerald-300">কে এম হাবিবুল্লাহ</span> |{" "}
-              <a href="tel:01700905060" className="hover:text-white transition-colors">+৮৮০ ১৭০০৯০৫০৬০</a>
+              <a href="tel:01700905062" className="hover:text-white transition-colors">+৮৮০ ১৭০০৯০৫০৬২</a>
             </>
           )}
         </p>
