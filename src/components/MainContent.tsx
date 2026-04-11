@@ -41,7 +41,7 @@ function AccordionSection({ title, children, lang, sectionTitleColor, isOpen, on
   );
 }
 
-export default function MainContent({ t, lang }: { t: TranslationDict, lang: "en" | "bn" }) {
+export default function MainContent({ t, lang, toggleLang }: { t: TranslationDict, lang: "en" | "bn", toggleLang?: () => void }) {
   const isEn = lang === "en";
   const titleColor = isEn ? "text-blue-200" : "text-emerald-200";
   const subheadColor = isEn ? "text-blue-100" : "text-emerald-100";
@@ -66,6 +66,30 @@ export default function MainContent({ t, lang }: { t: TranslationDict, lang: "en
 
   return (
     <div className="max-sm:px-6 max-sm:pb-24 sm:p-8 md:p-12 lg:p-16 w-full flex flex-col max-sm:gap-3 sm:gap-12 text-white max-sm:bg-black/10 max-sm:backdrop-blur-xl">
+      
+      {/* Desktop Main Header */}
+      <header className="hidden md:flex flex-col mb-8 relative">
+        <h1 className={`text-4xl lg:text-5xl font-bold font-bangla tracking-wider drop-shadow-md`}>
+          {t.name.split(" ").map((word, index) => (
+            <React.Fragment key={index}>
+              {word}{" "}
+            </React.Fragment>
+          ))}
+        </h1>
+        <h2 className={`text-xl opacity-90 mt-2 font-bold drop-shadow transition-colors duration-700 ${titleColor}`}>
+          {t.title}
+        </h2>
+        {/* Language Toggle Button */}
+        {toggleLang && (
+          <button 
+            onClick={toggleLang}
+            className="absolute right-0 top-0 z-50 bg-white/10 backdrop-blur-md border border-white/30 text-white font-semibold py-2 px-6 rounded-full shadow-lg hover:bg-white/20 transition-all cursor-pointer"
+            aria-label="Toggle Language"
+          >
+            {lang === "en" ? "বাংলা" : "English"}
+          </button>
+        )}
+      </header>
       {/* Professional Career */}
       <AccordionSection 
         title={t.professionalCareer} 

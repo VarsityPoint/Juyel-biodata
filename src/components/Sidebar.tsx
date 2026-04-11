@@ -66,7 +66,7 @@ export default function Sidebar({ t, lang }: { t: TranslationDict, lang: "en" | 
       </div>
 
       {/* Name and Title */}
-      <div className="text-center mt-2 mb-6 sm:mb-10 mx-auto flex flex-col items-center w-full px-6">
+      <div className="text-center mt-2 mb-6 sm:mb-10 mx-auto md:hidden flex flex-col items-center w-full px-6">
         <h1 className={`text-2xl md:text-3xl font-bold ${lang === "bn" ? "font-bangla" : ""}`}>
           {t.name}
         </h1>
