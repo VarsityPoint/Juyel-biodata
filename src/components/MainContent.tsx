@@ -9,7 +9,16 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-function AccordionSection({ title, children, lang, sectionTitleColor, isOpen, onToggle }: any) {
+interface AccordionSectionProps {
+  title: string;
+  children: React.ReactNode;
+  lang: "en" | "bn";
+  sectionTitleColor: string;
+  isOpen: boolean;
+  onToggle: () => void;
+}
+
+function AccordionSection({ title, children, lang, sectionTitleColor, isOpen, onToggle }: AccordionSectionProps) {
   const mobileActiveStyles = isOpen
     ? lang === "en" 
       ? "max-sm:bg-blue-900/30 max-sm:border-blue-400/40 max-sm:shadow-[0_0_20px_rgba(59,130,246,0.2)]"
